@@ -1,0 +1,5 @@
+#!/usr/bin/tcsh -f
+foreach f (*.java)
+    echo Compiling $f
+    javac $f
+end

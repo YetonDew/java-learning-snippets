@@ -1,0 +1,3 @@
+find . -name '*.class' -delete
+rm -f myapplication/Person.java \
+      myapplication/Car.java
