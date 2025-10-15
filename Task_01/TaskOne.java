@@ -1,3 +1,10 @@
+// Write a program which reads three integers (say, a, b and c), then prints these three
+// numbers
+// and then rearranges the values in these variables in such a way that a contains the
+// smallest of the three numbers, b — the middle one, and c — the largest. Print again
+// and you shoud see the same three numbers, but in ascending order.
+// Any two (or all three) numbers may be equal. Do not use arrays or Strings!
+
 import java.util.Scanner;
 
 public class TaskOne {

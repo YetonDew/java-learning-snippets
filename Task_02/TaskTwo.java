@@ -1,3 +1,10 @@
+// Write a program reading integers until zero is entered and printing the length of the
+// longest sequence of consecutive numbers of the same value (and this value).
+// For example, for
+// 2 2 2 2 3 3 3 2 6 6 6 0
+// the result should be
+// Longest sequence: 4 times 2
+
 import java.util.Scanner;
 
 public class TaskTwo {
