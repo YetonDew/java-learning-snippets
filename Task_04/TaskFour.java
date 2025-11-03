@@ -22,15 +22,20 @@ public class TaskFour {
 
 		int period = 0;
 		period |= (tod & 0x1F);
-		period |= ((tom & 0x0F) << 4);
+		period |= ((tom & 0x0F) << 5);
 		period |= (((toy - 2000) & 0x7F) << 9);
 		period |= ((fromd & 0x1F) << 16);
-		period |= ((fromm & 0x0F) << 20);
+		period |= ((fromm & 0x0F) << 21);
 		period |= (((fromy - 2000) & 0x7F) << 25);
 
 		fromy = fromm = fromd = toy = tom = tod = 0;
 
-		// ... (unpack 6 numbers from'period')
+		tod = period & 0x1F;
+		tom = (period >>> 5) & 0x0F;
+		toy = ((period >>> 9) & 0x7F) + 2000;
+		fromd = (period >>> 16) & 0x1F;
+		fromm = (period >>> 21) & 0x0F;
+		fromy = ((period >>> 25) & 0x7F) + 2000;
 
 		System.out.println("**** Reconstructed\n" +
 				"From " + fromy + "/" +
