@@ -21,8 +21,12 @@ public class TaskFour {
 				toy + "/" + tom + "/" + tod);
 
 		int period = 0;
-
-		// ... (pack 6 numbers into'period')
+		period |= (tod & 0x1F);
+		period |= ((tom & 0x0F) << 4);
+		period |= (((toy - 2000) & 0x7F) << 9);
+		period |= ((fromd & 0x1F) << 16);
+		period |= ((fromm & 0x0F) << 20);
+		period |= (((fromy - 2000) & 0x7F) << 25);
 
 		fromy = fromm = fromd = toy = tom = tod = 0;
 
