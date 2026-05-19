@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+public class Person{
+    private final String name;
 
-public class Person {
+    public Person(String name)
+    {
+        this.name = name;
+    }
+
+    String getName()
+    {
+        return this.name;
+    }
 }
